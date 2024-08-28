@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     });
 
     const result = completion.choices[0].message.content;
-    return NextResponse.json({ result: JSON.parse(result) });
+    return NextResponse.json({ result: result ? JSON.parse(result) : null });
   } catch (error) {
     console.error('OpenAI API error:', error);
     return NextResponse.json({ error: 'Failed to generate response' }, { status: 500 });
