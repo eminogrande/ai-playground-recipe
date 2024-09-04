@@ -1,5 +1,5 @@
 'use client';
-import PetNameGenerator from './petNameGenerator';
+import PetNameGenerator from '../components/petNameGenerator';
 
 export default function Home() {
   return (
