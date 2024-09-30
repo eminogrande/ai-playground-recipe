@@ -20,7 +20,7 @@ This project is a boilerplate for creating AI-powered applications using Next.js
 - `hooks/`: 
   - `useOpenAI.ts`: Custom hook for OpenAI API interactions
 - `prompts/`: 
-  - `petNamePrompt.ts`: Configuration for pet name generation prompts with [structured outputs](https://platform.openai.com/docs/guides/structured-outputs)
+  - `petNamePrompt.ts`: Configuration for pet name generation prompts with [structured outputs](https://platform.openai.com/docs/guides/structured-outputs) should use model gpt-4o-2024-08-06 or later
 
 ## 3. Getting Started
 
