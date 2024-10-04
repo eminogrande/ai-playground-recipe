@@ -18,14 +18,18 @@ export function useOpenAI<T>() {
         body: JSON.stringify({ prompt }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to generate response');
+        console.error('API Error:', data);
+        throw new Error(data.error || 'Failed to generate response');
       }
 
-      const data = await response.json();
+      console.log('API Response:', data);
       setResult(data.result);
     } catch (err) {
-      setError('Error generating response');
+      console.error('Error in generateResponse:', err);
+      setError(err instanceof Error ? err.message : 'Error generating response');
     } finally {
       setLoading(false);
     }
